@@ -9,6 +9,6 @@
     <TAlert variant="info" show>
       Alerte!
     </TAlert>
-    <TTextarea value="asdasdasd" name="my-textarea" status="success"/>
+    <TTextarea value="asdasdasd" name="my-textarea" status="success" />
   </div>
 </template>

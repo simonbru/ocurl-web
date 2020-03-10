@@ -4,9 +4,9 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
   content: [
     "./public/index.html",
     "./src/**/*.vue",
-    "./node_modules/vue-tailwind/src/themes/default/**/*.js"
+    "./node_modules/vue-tailwind/src/themes/default/**/*.js",
   ],
-  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
 });
 
 module.exports = {
@@ -16,10 +16,10 @@ module.exports = {
         plugins: [
           require("tailwindcss"),
           require("autoprefixer"),
-          ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
-        ]
-      }
-    }
+          ...(process.env.NODE_ENV === "production" ? [purgecss] : []),
+        ],
+      },
+    },
   },
-  lintOnSave: false
+  lintOnSave: false,
 };
